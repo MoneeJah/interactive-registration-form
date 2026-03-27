@@ -1,0 +1,214 @@
+/* Background Image with gradient overlay */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+}
+
+/* Glassmorphism Form Container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  width: 400px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Interactive Inputs */
+input {
+  width: calc(100% - 22px);
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Hover effects for button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #00f0ff, #0066ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #0066ff, #00f0ff);
+  transform: scale(1.05);
+}
+
+/* Error and Success messages */
+.error-message {
+  color: #ff4c4c;
+  font-size: 0.9em;
+  margin-top: 5px;
+  min-height: 1em;
+  transition: all 0.3s ease;
+}
+
+.success-message {
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+/* Valid / Invalid Inputs */
+input:valid {
+  border-color: #2ecc71;
+}
+
+input:invalid {
+  border-color: #ff4c4c;
+}
+#credit {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 0.8;
+  }
+}/* Form Groups spacing */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Glassy Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Glow on focus */
+input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 12px #00ffff;
+}
+
+/* Button upgrade */
+button[type="submit"] {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #00f0ff, #0066ff);
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+/* Error shake animation */
+input.error {
+  animation: shake 0.3s;
+  border-color: #ff4c4c;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Password strength bar */
+#password-strength {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+#strength-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#strength-text {
+  font-size: 12px;
+  color: white;
+}
+
+/* ===== YOUR FOOTER (UPGRADED) ===== */
+#credit {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.4);
+  padding: 6px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  color: white;
+  font-size: 13px;
+  opacity: 0;
+  animation: creditFade 2s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Glow your name */
+#credit span {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+  transition: 0.3s;
+}
+
+#credit span:hover {
+  text-shadow: 0 0 18px #00ffff, 0 0 30px #00ffff;
+}
+
+/* Footer fade */
+@keyframes creditFade {
+  to {
+    opacity: 0.9;
+  }
+}
